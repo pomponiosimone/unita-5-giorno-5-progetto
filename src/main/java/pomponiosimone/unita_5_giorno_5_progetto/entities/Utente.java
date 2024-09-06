@@ -8,7 +8,6 @@ import lombok.*;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "Utente")
 public class Utente {
@@ -22,8 +21,17 @@ public class Utente {
         private String email;
         private int nPrenotazioni;
 
+//Costruttore
 
-//To string
+    public Utente(String email, String nomeECognome, int nPrenotazioni, String username) {
+        this.email = email;
+        this.nomeECognome = nomeECognome;
+        this.nPrenotazioni = nPrenotazioni;
+        this.username = username;
+    }
+
+
+    //To string
 
     @Override
     public String toString() {

@@ -22,25 +22,27 @@ public class Edificio {
     private UUID id;
     private String citta;
     private String nomeEdificio;
-
+private String indirizzo;
 
     // COSTRUTTORI
 
-    public Edificio(String città, String nomeEdificio) {
+    public Edificio(String città, String nomeEdificio, String indirizzo) {
         this.citta = citta;
         this.nomeEdificio = nomeEdificio;
+        this.indirizzo = indirizzo;
     }
 
 
     // TO STRING
 
+
     @Override
     public String toString() {
         return "Edificio{" +
-                "id=" + id +
-                ", città='" + citta + '\'' +
+                "citta='" + citta + '\'' +
+                ", id=" + id +
                 ", nomeEdificio='" + nomeEdificio + '\'' +
+                ", indirizzo='" + indirizzo + '\'' +
                 '}';
     }
-
 }
