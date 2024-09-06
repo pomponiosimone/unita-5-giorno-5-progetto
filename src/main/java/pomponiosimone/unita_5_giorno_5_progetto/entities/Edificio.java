@@ -1,8 +1,6 @@
 package pomponiosimone.unita_5_giorno_5_progetto.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,6 +16,7 @@ import java.util.UUID;
 public class Edificio {
 
     @Id
+    @GeneratedValue
     @Setter(AccessLevel.NONE)
     private UUID id;
     private String citta;

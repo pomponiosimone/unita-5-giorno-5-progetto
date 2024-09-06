@@ -17,6 +17,7 @@ import java.util.UUID;
 @Setter
 public class Postazione {
     @Id
+    @GeneratedValue
     @Setter(AccessLevel.NONE)
     private UUID id;
     private String descrizione;

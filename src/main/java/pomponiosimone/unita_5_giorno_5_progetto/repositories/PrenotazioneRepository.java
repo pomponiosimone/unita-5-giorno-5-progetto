@@ -12,7 +12,7 @@ import java.util.UUID;
 
 @Repository
 public interface PrenotazioneRepository extends JpaRepository<Prenotazione, Long> {
-    boolean existsByiD(UUID id);
+    boolean existsById(Long id);
     List<Prenotazione> findByUtenteAndData(Utente utente, LocalDate data);
     List<Prenotazione> findByPostazioneAndData(Postazione postazione, LocalDate data);
 }
