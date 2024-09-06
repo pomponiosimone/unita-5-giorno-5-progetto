@@ -6,4 +6,5 @@ import pomponiosimone.unita_5_giorno_5_progetto.entities.Utente;
 
 @Repository
 public interface UtenteRepository extends JpaRepository<Utente, String> {
+    boolean existsByUsername(String username);
 }

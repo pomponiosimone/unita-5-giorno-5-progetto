@@ -42,4 +42,5 @@ public class Edificio {
                 ", nomeEdificio='" + nomeEdificio + '\'' +
                 '}';
     }
+
 }

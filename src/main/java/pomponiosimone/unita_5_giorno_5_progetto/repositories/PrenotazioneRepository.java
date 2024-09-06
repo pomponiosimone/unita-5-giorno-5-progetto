@@ -8,9 +8,11 @@ import pomponiosimone.unita_5_giorno_5_progetto.entities.Utente;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.UUID;
 
 @Repository
 public interface PrenotazioneRepository extends JpaRepository<Prenotazione, Long> {
-    List<Prenotazione> findByPostazioneAndDataPrenotazione(Postazione postazione, LocalDate dataPrenotazione);
-    List<Prenotazione> findByUtenteAndDataPrenotazione(Utente utente, LocalDate dataPrenotazione);
+    boolean existsByiD(UUID id);
+    List<Prenotazione> findByUtenteAndData(Utente utente, LocalDate data);
+    List<Prenotazione> findByPostazioneAndData(Postazione postazione, LocalDate data);
 }
