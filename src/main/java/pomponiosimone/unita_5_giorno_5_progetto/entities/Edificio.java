@@ -25,7 +25,7 @@ private String indirizzo;
 
     // COSTRUTTORI
 
-    public Edificio(String città, String nomeEdificio, String indirizzo) {
+    public Edificio(String citta, String nomeEdificio, String indirizzo) {
         this.citta = citta;
         this.nomeEdificio = nomeEdificio;
         this.indirizzo = indirizzo;

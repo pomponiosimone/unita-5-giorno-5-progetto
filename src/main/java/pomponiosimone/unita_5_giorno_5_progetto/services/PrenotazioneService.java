@@ -17,7 +17,7 @@ public class PrenotazioneService {
         private PrenotazioneRepository prenotazioneRepository;
 
         public void savePrenotazione(Prenotazione newPrenotazione){
-            if(prenotazioneRepository.existsById(newPrenotazione.getId())) throw new ValidationException("La Prenotazione " + newPrenotazione.getId() + " esiste già");
+
             prenotazioneRepository.save(newPrenotazione);
 
             log.info("nuova Prenotazione "+ newPrenotazione.getId() +"  salvata");

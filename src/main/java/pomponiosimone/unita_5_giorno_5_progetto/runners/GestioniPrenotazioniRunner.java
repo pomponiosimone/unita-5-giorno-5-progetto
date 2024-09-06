@@ -36,7 +36,7 @@ public class GestioniPrenotazioniRunner implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
 
-        Edificio edificio1 = new Edificio("Roma","PascoliItaliani", "Via Miami, 50");
+        Edificio edificio1 = new Edificio("Roma","Pascoli RRItaliani", "Via Miami, 50");
         Edificio edificio2 = new Edificio("Milano", "ModernWar", "via Nodi, 50");
         Edificio edificio3 = new Edificio("Pisa", "CityLife", "Via benessere, 43");
 

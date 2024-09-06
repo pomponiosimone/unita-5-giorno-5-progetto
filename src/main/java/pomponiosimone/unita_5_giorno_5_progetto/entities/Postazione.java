@@ -17,9 +17,9 @@ import java.util.UUID;
 @Setter
 public class Postazione {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Setter(AccessLevel.NONE)
-    private UUID id;
+    private Long id;
     private String descrizione;
 
     @Enumerated

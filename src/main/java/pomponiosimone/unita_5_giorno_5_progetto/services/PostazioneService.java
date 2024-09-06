@@ -18,8 +18,7 @@ public class PostazioneService {
 
     public void savePostazione(Postazione newPostazione) {
 
-        if (postazioneRepository.existsById(newPostazione.getId()))
-            throw new ValidationException("La Postazione con " + newPostazione.getId() + " è già in utilizzo");
+
 
 
         postazioneRepository.save(newPostazione);
