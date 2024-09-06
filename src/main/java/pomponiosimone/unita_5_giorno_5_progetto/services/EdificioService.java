@@ -12,19 +12,9 @@ import pomponiosimone.unita_5_giorno_5_progetto.repositories.EdificioRepository;
 public class EdificioService {
     @Autowired
     private EdificioRepository edificioRepository;
-    public void saveEdificio(Edificio newEdificio) {
-        if (newEdificio == null) {
-            throw new ValidationException("L'edificio non può essere nullo");
-        }
-
-        // Controllo se esiste già l'edificio
-        if (edificioRepository.existsByNomeEdificio(newEdificio.getNomeEdificio())) {
-            log.error("Tentativo di salvare un edificio esistente: {}", newEdificio.getNomeEdificio());
-            throw new ValidationException("L'Edificio " + newEdificio.getNomeEdificio() + " esiste già");
-        }
-
-        // Salva il nuovo edificio
+    public void saveEdificio(Edificio newEdificio){
+        if(edificioRepository.existsByNomeEdificio(newEdificio.getNomeEdificio())) throw new ValidationException("L'Edificio " + newEdificio.getNomeEdificio() + " esiste già");
         edificioRepository.save(newEdificio);
-        log.info("Nuovo Edificio salvato: {}", newEdificio.getNomeEdificio());
+        log.info("nuovo Edificio "+ newEdificio.getNomeEdificio() +"  salvato");
     }
 }

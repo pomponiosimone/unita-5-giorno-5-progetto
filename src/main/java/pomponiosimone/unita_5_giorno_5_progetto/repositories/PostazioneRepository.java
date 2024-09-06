@@ -6,8 +6,11 @@ import pomponiosimone.unita_5_giorno_5_progetto.entities.Postazione;
 import pomponiosimone.unita_5_giorno_5_progetto.enums.TipoPostazione;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
-public interface PostazioneRepository extends JpaRepository<Postazione, UUID> {
+public interface PostazioneRepository extends JpaRepository<Postazione, Long> {
 
-    }
+
+
+}
